@@ -1,6 +1,8 @@
 import Hero from "../components/Hero.jsx";
-import fondoVideo from "../assets/videoFondo.mp4";
+import Services from "../components/Services.jsx";
 import PortfolioSection from "../components/PortfolioSection";
+import fondoVideo from "../assets/videoFondo.mp4";
+import FloatingButtons from "../components/FloatingButtons.jsx";
 
 export default function Home() {
   return (
@@ -19,10 +21,14 @@ export default function Home() {
       {/* OVERLAY */}
       <div className="absolute inset-0 bg-black/60" />
 
-      {/* HERO */}
-      <Hero />
-      {/* PORTFOLIO */}
-      <PortfolioSection />
+      {/* CONTENIDO */}
+      <div className="relative">
+        <Hero />
+        <PortfolioSection />
+        <Services />
+        <FloatingButtons/>
+      </div>
+
     </div>
   );
 }

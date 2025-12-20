@@ -7,15 +7,19 @@ export default function Header() {
   return (
     <>
       {/* HEADER */}
-      <header className="
-        fixed top-0 left-0 w-full z-50
-        h-16 md:h-20
-        px-6
-        flex items-center justify-between
-        bg-gradient-to-b from-black/70 to-black/20
-        backdrop-blur-sm
-        border-b border-white/5
-      ">
+      <header
+        data-aos="fade-down"
+        data-aos-duration="800"
+        className="
+          fixed top-0 left-0 w-full z-50
+          h-16 md:h-20
+          px-6
+          flex items-center justify-between
+          bg-gradient-to-b from-black/70 to-black/20
+          backdrop-blur-sm
+          border-b border-white/5
+        "
+      >
         {/* Logo */}
         <img
           src={LogoJD}
@@ -64,25 +68,39 @@ export default function Header() {
 
         {/* Links */}
         <nav className="px-6 py-10 space-y-6 text-white text-lg">
-          <button onClick={() => {
-      document.getElementById("inicio")?.scrollIntoView({
-        behavior: "smooth",
-      });
-    }} className="block w-full text-left hover:text-blue-400 transition">
+          <button
+            data-aos="fade-right"
+            data-aos-delay="100"
+            onClick={() => {
+              setOpen(false);
+              document.getElementById("inicio")?.scrollIntoView({ behavior: "smooth" });
+            }}
+            className="block w-full text-left hover:text-blue-400 transition"
+          >
             Inicio
           </button>
-          <button onClick={() => {
-      document.getElementById("portfolio")?.scrollIntoView({
-        behavior: "smooth",
-      });
-    }} className="block w-full text-left hover:text-blue-400 transition">
+
+          <button
+            data-aos="fade-right"
+            data-aos-delay="200"
+            onClick={() => {
+              setOpen(false);
+              document.getElementById("portfolio")?.scrollIntoView({ behavior: "smooth" });
+            }}
+            className="block w-full text-left hover:text-blue-400 transition"
+          >
             Portfolio
           </button>
-          <button onClick={() => {
-      document.getElementById("contacto")?.scrollIntoView({
-        behavior: "smooth",
-      });
-    }} className="block w-full text-left hover:text-blue-400 transition">
+
+          <button
+            data-aos="fade-right"
+            data-aos-delay="300"
+            onClick={() => {
+              setOpen(false);
+              document.getElementById("services")?.scrollIntoView({ behavior: "smooth" });
+            }}
+            className="block w-full text-left hover:text-blue-400 transition"
+          >
             Contacto
           </button>
         </nav>

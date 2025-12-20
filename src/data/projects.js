@@ -1,5 +1,5 @@
 import Midland from "../assets/proyectoMidland1.jpeg";
-import Midland2 from "../assets/proyectoMidland2.jpeg";
+
 
 export const projects = [
   {

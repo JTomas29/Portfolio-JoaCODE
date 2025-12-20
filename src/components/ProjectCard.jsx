@@ -1,7 +1,17 @@
-export default function ProjectCard({ project }) {
+export default function ProjectCard({ project, index }) {
   return (
     <div
-      className=" bg-white/5 backdrop-blur-md border border-white/10 rounded-xl overflow-hidden transition hover:scale-[1.02]"
+      data-aos="zoom-in"
+      data-aos-delay={index * 150}
+      className="
+        bg-white/5
+        backdrop-blur-md
+        border border-white/10
+        rounded-xl
+        overflow-hidden
+        transition
+        hover:scale-[1.02]
+      "
     >
       {/* Imagen */}
       <img
@@ -22,10 +32,11 @@ export default function ProjectCard({ project }) {
 
         {/* Tecnologías */}
         <div className="flex flex-wrap gap-2 mb-6">
-          {project.tech.map((tech, index) => (
+          {project.tech.map((tech, i) => (
             <span
-              key={index}
-              className="text-xs px-3 py-1 rounded-full  bg-blue-500/20  text-blue-300 ">
+              key={i}
+              className="text-xs px-3 py-1 rounded-full bg-blue-500/20 text-blue-300"
+            >
               {tech}
             </span>
           ))}
